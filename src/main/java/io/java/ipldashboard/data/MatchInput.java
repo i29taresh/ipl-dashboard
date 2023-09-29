@@ -4,7 +4,7 @@ public class MatchInput {
     private String ID;
     private String City;
     private String Date;
-    private String Season;
+    private long Season;
     private String MatchNumber;
     private String Team1;
     private String Team2;
@@ -40,10 +40,10 @@ public class MatchInput {
     public void setDate(String date) {
         Date = date;
     }
-    public String getSeason() {
+    public long getSeason() {
         return Season;
     }
-    public void setSeason(String season) {
+    public void setSeason(long season) {
         Season = season;
     }
     public String getMatchNumber() {

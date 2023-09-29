@@ -20,6 +20,7 @@ public class MatchDataProcessor implements ItemProcessor<MatchInput, Match> {
     match.setCity(matchInput.getCity());
 
     match.setDate(LocalDate.parse(matchInput.getDate()));
+    match.setSeason(matchInput.getSeason());
 
     match.setPlayerOfMatch(matchInput.getPlayer_of_Match());
     match.setVenue(matchInput.getVenue());
@@ -29,7 +30,7 @@ public class MatchDataProcessor implements ItemProcessor<MatchInput, Match> {
 
     if("bat".equals(matchInput.getTossDecision())){
         firstInningsTeam = matchInput.getTossWinner();
-        secondInningsTeam = matchInput.getTossWinner().equals(matchInput.getTeam1()) ? matchInput.getTeam1() : matchInput.getTeam2();
+        secondInningsTeam = matchInput.getTossWinner().equals(matchInput.getTeam1()) ? matchInput.getTeam2() : matchInput.getTeam1();
     }
     else{
         secondInningsTeam = matchInput.getTossWinner();

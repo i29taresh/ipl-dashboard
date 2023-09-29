@@ -11,6 +11,7 @@ public class Match {
     private long iD;
     private String city;
     private LocalDate date;
+    private long season;
     private String team1;
     private String team2;
     private String venue;
@@ -40,6 +41,12 @@ public class Match {
     }
     public void setDate(LocalDate date) {
         this.date = date;
+    }
+    public long getSeason() {
+        return season;
+    }
+    public void setSeason(long season) {
+        this.season = season;
     }
     public String getTeam1() {
         return team1;
